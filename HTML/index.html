@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-3</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body id="bodys" onload="logInPage()">
+
+    <template id="loginPage">
+
+        <div>
+            <h1>Hilma Wanted Search Engine</h1>
+        </div>
+
+        <form>
+            <input type="text" placeholder="username">
+            <input id="passwordValid" type="password" placeholder="password">
+        </form>
+
+        <div class="btn-group">
+            <button id="register" onclick="registration()"> register </button>
+            <button id="logIn" onclick="validate()"> log in </button>
+        </div>
+
+    </template>
+
+    <template id="RegistrationPage">
+
+        <div>
+            <h1>Hilma Wanted Search Engine</h1>
+        </div>
+
+        <form id="regForm">
+            <input id="fullName" class="singUp" type="text" placeholder="full name" required>
+            <input class="singUp" type="text" placeholder="username" required>
+            <input class="singUp" type="password" placeholder="password" required>
+            <input class="singUp" type="email" placeholder="email">
+            <input class="singUp" type="tel" placeholder="phone number" pattern="[0-9]{10}" required>
+            <input class="singUp" type="text" placeholder="Address" required>
+            <input class="singUp" type="date" placeholder="birthday" required>
+            <input class="singUp" type="text" placeholder="Work place">
+            <input class="singUp" type="number" placeholder="height" min="70" max="220">
+            <div>
+                <label for="checkbox"> admin user: </label>
+                <input class="singUp" name="checkbox" id="chackboxVal" checked="" type="checkbox"
+                    placeholder="administrator">
+            </div>
+            <input id="submit" onclick="submited()" class="singUp" type="submit" value="submit">
+        </form>
+
+    </template>
+
+    <template id="app">
+
+        <div id="appHeader">
+            <h1>Hilma Wanted Search Engine</h1>
+            <button id="logOut" onclick="logInPage()"> log Out </button>
+        </div>
+
+        <form>
+            <input id="search" type="text" placeholder="search">
+        </form>
+
+        <div>
+            <button id="searchBtn" onclick="searching()"> search </button>
+            <button id="deleteBtn" onclick="deleteProfile()"> delete </button>
+        </div>
+
+        <p id="person"></p>
+
+    </template>
+
+    <script src="../javascript/database.js"></script>
+    <script src="../javascript/server.js"></script>
+    <script src="../javascript/main.js" type="text/javascript"></script>
+    <script src="../javascript/localStorge.js"></script>
+    <script src="../javascript/search.js"></script>
+
+</body>
+
+</html>
